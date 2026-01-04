@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }} | Dr. Yun Chen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="logo">YC</div>
+
+            <nav class="primary-nav">
+                <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">About</a>
+                <a href="{{ '/cv.html' | relative_url }}" class="{% if page.url == '/cv.html' %}active{% endif %}">CV</a>
+            </nav>
+
+            <div class="section-label">Projects</div>
+            <nav class="secondary-nav">
+                <a href="{{ '/projects.html' | relative_url }}" class="{% if page.url == '/projects.html' %}active{% endif %}">All Projects</a>
+            </nav>
+
+            <div class="section-label">Teaching</div>
+            <nav class="secondary-nav">
+                <a href="{{ '/teaching.html' | relative_url }}" class="{% if page.url == '/teaching.html' %}active{% endif %}">Overview</a>
+            </nav>
+
+            <div class="section-label">Publications</div>
+            <nav class="secondary-nav">
+                <a href="{{ '/publications.html' | relative_url }}" class="{% if page.url == '/publications.html' %}active{% endif %}">Selected Works</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            {{ content }}
+        </main>
+
+    </div>
+</body>
+</html>

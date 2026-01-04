@@ -1,0 +1,57 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #1a1a1a
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 40px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    border-right: 1px solid #EAEAEA;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 60px;
+    letter-spacing: -0.04em;
+    background: #f0f0f0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.primary-nav a {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #888;
+}
+
+.primary-nav a:hover, .primary-nav a.active {
+    color: #000;
+}
